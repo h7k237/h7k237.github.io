@@ -2,3 +2,5 @@ title: Hammad Khan
 logo: /assets/img/profile.jpg
 description: San Francisco, California.
 theme: jekyll-theme-minimal
+show_downloads: false
+google_analytics: true
