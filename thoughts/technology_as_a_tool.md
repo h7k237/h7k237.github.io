@@ -1,5 +1,8 @@
-# Technology as a Tool
-
+---
+layout: post
+title: Technology as a Tool
+date: 2025-06-23
+---
 One of the most common mistakes made by engineers—especially at large companies—is failing to architect solutions with the company's core product in mind. This misalignment often leads to wasted engineering and management time. Every company has a core business, and all engineering work should serve that business. Siloed engineering teams, in particular, tend to focus more on crafting elegant technical solutions than on the actual impact those solutions have on the core product.
 
 I've seen this happen many times—and I've fallen into the same trap myself as I’ve gained experience in the industry. My view is that even the most beautiful engineering solution results in a suboptimal product if it prioritizes technical elegance over user value.
