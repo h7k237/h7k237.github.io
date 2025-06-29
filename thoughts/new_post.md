@@ -1,8 +1,7 @@
 ---
 layout: post
 title: My Blog Post
+date: June 2025
 ---
 
-# My Blog Post
-
-My Blog Post
+Here I'm describing my blog post.
