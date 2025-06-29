@@ -7,7 +7,7 @@ date: 2025-06-29
 >
 > - [Elon Musk](https://www.youtube.com/watch?v=0ygRqjBQAUk)
 
-How is it possible that tech giants with billions in cash, elite talent, and cutting-edge infrastructure are getting leapfrogged by five-person startups in breakthrough technologies? Why hasn’t Google — the king of search — been unable to deliver a dominant AI search tool, and is instead playing catch-up to OpenAI, Anthropic, and Perplexity?
+How is it possible that tech giants with billions in cash, elite talent, and cutting-edge infrastructure are getting leapfrogged by five-person startups in breakthrough technologies? Why hasn’t Google — the king of search — been able to deliver a dominant AI search tool, and is instead playing catch-up to OpenAI, Anthropic, and Perplexity?
 
 What is stopping CEOs from saying: Here, take five brilliant people, unlimited capital, and go build a competitive product using this new technology?
 
