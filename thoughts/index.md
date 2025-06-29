@@ -1,2 +1,2 @@
 - [Technology as a Tool](./technology_as_a_tool.html)
-- [New Post](./new_post.html)
+- [Why Big Companies Rarely Build the Future](./why_big_companies_rarely_build_the_future.html)
