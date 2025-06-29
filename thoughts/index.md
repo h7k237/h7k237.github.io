@@ -1,2 +1,2 @@
-- [Technology as a Tool](./thoughts/technology_as_a_tool.html)
-- [New Post](./thoughts/new_post.html)
+- [Technology as a Tool](./technology_as_a_tool.html)
+- [New Post](./new_post.html)
