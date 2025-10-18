@@ -104,7 +104,7 @@ const PersonalBrandV2 = () => {
               lineHeight: '0.95'
             }}
           >
-            Hammad Khan
+            Hammad<br/>Khan
           </h1>
 
           {/*
@@ -201,17 +201,16 @@ const PersonalBrandV2 = () => {
               </p>
 
               <p
-                className="text-xl text-forest-green max-w-xl"
+                className="text-xl text-paper-black max-w-xl"
                 style={{
                   fontFamily: "'Crimson Text', serif",
                   lineHeight: '1.3',
                   letterSpacing: '-0.01em'
                 }}
               >
-                Today, I'm especially passionate about how evolving<br/>
-                AI technologies can positively shape our society,<br/>
-                and I'm excited to build responsible, impactful systems<br/>
-                that help bring that future closer.
+                Today, I'm especially interested in evolving AI<br/>
+                technologies, and I'm excited to build novel,<br/>
+                impactful systems supercharged with the power of AI.
               </p>
             </div>
           </div>
