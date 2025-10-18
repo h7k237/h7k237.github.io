@@ -66,7 +66,7 @@ const PersonalBrandV2 = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-paper-white/90 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-8 py-8 flex justify-between items-center">
           <div
-            className="text-lg font-bold tracking-tight cursor-pointer text-paper-black hover:text-my-amber transition-colors"
+            className="text-lg font-bold tracking-tight cursor-pointer text-forest-green hover:text-my-amber transition-colors"
             style={{ fontFamily: "'Cormorant Garamond', serif" }}
             onClick={() => window.scrollTo({ top: 0 })}
           >
@@ -78,7 +78,7 @@ const PersonalBrandV2 = () => {
                 key={item}
                 onClick={() => scrollToSection(item)}
                 className={`text-sm capitalize transition-colors ${
-                  activeSection === item ? 'text-my-amber' : 'text-forest-green hover:text-paper-black'
+                  activeSection === item ? 'text-my-amber' : 'text-forest-green hover:text-my-amber'
                 }`}
                 style={{ fontFamily: "'Crimson Text', serif" }}
               >
@@ -98,7 +98,7 @@ const PersonalBrandV2 = () => {
       }}>
         <div className="max-w-2xl mx-auto text-center">
           <h1
-            className="text-8xl font-black mb-12 tracking-tight text-forest-green"
+            className="text-8xl font-black mb-12 tracking-tight text-paper-black"
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               lineHeight: '0.95'
@@ -128,7 +128,7 @@ const PersonalBrandV2 = () => {
                 key={item.name}
                 href={item.link}
                 target={item.link.startsWith('http') ? '_blank' : undefined}
-                className="text-paper-black hover:text-my-amber transition-colors"
+                className="text-forest-green hover:text-my-amber transition-colors"
                 style={{ fontFamily: "'Crimson Text', serif" }}
               >
                 {item.name}
