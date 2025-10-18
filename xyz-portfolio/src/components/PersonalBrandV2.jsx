@@ -149,6 +149,17 @@ const PersonalBrandV2 = () => {
           <div className="max-w-2xl mx-auto">
             <div className="w-12 h-px bg-my-amber mb-20"></div>
 
+              <h2
+                className="text-6xl font-bold mb-12 text-forest-green"
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  lineHeight: '1.1',
+                  letterSpacing: '-0.02em'
+                }}
+              >
+                Hello!
+              </h2>
+
             <div className="space-y-16">
               <p
                 className="text-xl text-paper-black max-w-xl"
@@ -158,8 +169,8 @@ const PersonalBrandV2 = () => {
                   letterSpacing: '-0.01em'
                 }}
               >
-                Hello! I'm a software engineer and<br/>
-                tech enthusiast based in San Francisco, CA.<br/>
+                I'm a software engineer and tech enthusiast<br/>
+                based in San Francisco, CA.<br/>
               </p>
 
               <p
