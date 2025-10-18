@@ -418,8 +418,8 @@ const PersonalBrandV2 = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 px-8 text-center">
-        <p className="text-sm text-forest-green" style={{ fontFamily: "'Crimson Text', serif" }}>
+      <footer className="py-16 px-8 text-center bg-forest-green">
+        <p className="text-sm text-paper-white" style={{ fontFamily: "'Crimson Text', serif" }}>
           © 2025 Hammad Khan
         </p>
       </footer>
