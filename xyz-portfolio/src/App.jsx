@@ -1,7 +1,7 @@
-import PersonalBrand from './components/PersonalBrand'
+import PersonalBrandV2 from './components/PersonalBrandV2'
 
 function App() {
-  return <PersonalBrand />
+  return <PersonalBrandV2 />
 }
 
 export default App
