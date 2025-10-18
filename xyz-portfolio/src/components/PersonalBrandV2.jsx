@@ -63,7 +63,7 @@ const PersonalBrandV2 = () => {
       <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700;900&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet" />
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-paper-white/95 backdrop-blur-sm">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-paper-white/90 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-8 py-8 flex justify-between items-center">
           <div
             className="text-lg font-bold tracking-tight cursor-pointer text-paper-black hover:text-my-amber transition-colors"
