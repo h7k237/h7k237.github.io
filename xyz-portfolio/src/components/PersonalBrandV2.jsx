@@ -400,15 +400,15 @@ const PersonalBrandV2 = () => {
           <div className="flex gap-6">
             <a
               href="mailto:h7k237@gmail.com"
-              className="inline-block px-10 py-4 bg-my-amber text-paper-white text-base font-semibold transition-all hover:opacity-90"
+              className="text-sm font-semibold text-forest-green hover:text-my-amber transition-colors"
               style={{ fontFamily: "'Crimson Text', serif" }}
             >
-              Email me
+              Email
             </a>
             <a
               href="https://www.linkedin.com/in/hammadkhan97/"
               target="_blank"
-              className="inline-block px-10 py-4 border border-paper-black text-base font-semibold transition-all hover:bg-paper-black hover:text-paper-white text-paper-black"
+              className="text-sm font-semibold text-forest-green hover:text-my-amber transition-colors"
               style={{ fontFamily: "'Crimson Text', serif" }}
             >
               LinkedIn
