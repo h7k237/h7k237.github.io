@@ -5,7 +5,7 @@ import HomePage from '@/pages/HomePage';
 
 function App() {
   return (
-    <BrowserRouter basename="/xyz-portfolio">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/posts/:slug" element={<PostPage />} />
