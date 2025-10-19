@@ -4,6 +4,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/xyz-portfolio/',
   plugins: [react()],
   resolve: {
     alias: {
