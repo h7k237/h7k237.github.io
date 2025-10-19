@@ -139,7 +139,7 @@ const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
           </div>
           <div className="flex-shrink-0">
             <img
-              src="/src/assets/profile.jpg"
+              src="/profile.jpg"
               alt="Profile"
               className="w-60 h-60 object-cover border-1 border-gray-700 hover:border-blue-400 transition-all duration-300 shadow-2xl"
               loading="lazy"
