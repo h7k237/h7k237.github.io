@@ -111,7 +111,7 @@ const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
                 Hello!
               </h2>
 
-            <div className="space-y-16">
+            <div className="space-y-10">
               <p className="max-w-xl">
                 I'm a software engineer and tech enthusiast<br/>
                 based in San Francisco, CA.<br/>
@@ -162,7 +162,7 @@ const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
             Backstory
           </h2>
 
-          <div className="space-y-16">
+          <div className="space-y-10">
             <p className="max-w-xl">
               I studied Computer Engineering at the University of Illinois at<br/>
               Urbana–Champaign, where I focused on computer architecture,<br/>
@@ -214,7 +214,7 @@ const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
             Writing
           </h2>
 
-          <div className="space-y-16">
+          <div className="space-y-10">
             {posts.map((post, idx) => {
               const isExternal = post.type === "external";
               const Wrapper = isExternal ? 'a' : Link;

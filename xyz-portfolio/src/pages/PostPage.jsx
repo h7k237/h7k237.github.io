@@ -23,7 +23,7 @@ export default function PostPage() {
               <div className="font-display text-2xl text-paper-black mb-8">
                 {post.date}
               </div>
-              <div className="space-y-16 mt-16 mb-48" dangerouslySetInnerHTML={{ __html: post.content }} />
+              <div className="mt-16 mb-48" dangerouslySetInnerHTML={{ __html: post.content }} />
             </>
           ) : (
             <h2 className="text-5xl mt-24">Post not found :(</h2>

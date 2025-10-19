@@ -45,6 +45,8 @@ export default {
           lineHeight: '1.1',
           letterSpacing: '-0.02em',
           color: theme('colors.forest-green'), // uses your custom color
+          marginTop: '3rem',      // mt-12
+          marginBottom: '1.5rem', // mb-6
         },
         'h3': {
           fontFamily: "'Cormorant Garamond', serif",
@@ -52,6 +54,8 @@ export default {
           fontWeight: '600',     // font-semibold
           letterSpacing: '-0.01em',
           color: theme('colors.paper-black'),
+          marginTop: '2rem',      // mt-8
+          marginBottom: '1rem',   // mb-4
         },
         'p': {
           fontFamily: "'Crimson Text', serif",
@@ -60,6 +64,14 @@ export default {
           letterSpacing: '-0.01em',
           color: theme('colors.paper-black'),
           maxWidth: '36rem', // max-w-xl
+          marginBottom: '1.5rem', // mb-6
+        },
+        'a': {
+          fontFamily: "'Crimson Text', serif",
+          fontSize: '1.25rem',  // text-xl
+          lineHeight: '1.3',
+          letterSpacing: '-0.01em',
+          color: theme('colors.paper-black'),
         },
       })
     }
