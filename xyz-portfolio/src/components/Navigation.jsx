@@ -33,7 +33,7 @@ const Navigation = ({ activeSection }) => {
         >
           HK
         </div>
-        <div className="flex gap-12">
+        <div className="flex gap-4 md:gap-12">
           {['about', 'backstory', 'writing', 'contact'].map((item) => (
             <button
               key={item}

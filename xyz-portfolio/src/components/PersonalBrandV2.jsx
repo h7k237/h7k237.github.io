@@ -104,7 +104,7 @@ const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
         //transform: visibleSections['about'] ? 'translateX(0)' : 'translateX(-40px)',
         transition: 'opacity 1s ease-out, transform 1s ease-out'
       }}>
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
           <div className="max-w-2xl mx-auto">
             <div className="w-12 h-px bg-my-amber mb-20"></div>
               <h2 className="mb-12">
@@ -112,28 +112,20 @@ const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
               </h2>
 
             <div className="space-y-10">
-              <p className="max-w-xl">
-                I'm a software engineer and tech enthusiast<br/>
-                based in San Francisco, CA.<br/>
+              <p className="max-w-sm">
+                I'm a software engineer and tech enthusiast based in San Francisco, CA.
               </p>
 
-              <p className="max-w-xl">
-                I began my career in computer engineering,<br/>
-                driven by a deep curiosity to understand<br/>
-                systems from the ground up.
+              <p className="max-w-sm">
+                I began my career in computer engineering, driven by a deep curiosity to understand systems from the ground up.
               </p>
 
-              <p className="max-w-xl">
-                From learning how flip-flops store bits<br/>
-                to designing operating systems,<br/>
-                I've always been fascinated by the architecture<br/>
-                and inner workings of complex systems.
+              <p className="max-w-sm">
+                From learning how flip-flops store bits to designing operating systems, I've always been fascinated by the architecture and inner workings of complex systems.
               </p>
 
-              <p className="max-w-xl">
-                Today, I'm especially interested in evolving AI<br/>
-                technologies, and I'm excited to build novel,<br/>
-                impactful systems supercharged with the power of AI.
+              <p className="max-w-sm">
+                Today, I'm especially interested in evolving AI technologies, and I'm excited to build novel, impactful systems supercharged with the power of AI.
               </p>
             </div>
           </div>
@@ -163,38 +155,24 @@ const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
           </h2>
 
           <div className="space-y-10">
-            <p className="max-w-xl">
-              I studied Computer Engineering at the University of Illinois at<br/>
-              Urbana–Champaign, where I focused on computer architecture,<br/>
-              embedded systems, and digital design.
+            <p className="max-w-md">
+              I studied Computer Engineering at the University of Illinois at Urbana–Champaign, where I focused on computer architecture, embedded systems, and digital design.
             </p>
 
-            <p className="max-w-xl">
-              In 2019, I joined Cisco Meraki as a firmware engineer, working<br/>
-              on large-scale networking systems. I was an early member of<br/>
-              the team that launched a new Meraki switching product line<br/>
-              and helped scale it to over 400,000 deployed switches worldwide.
+            <p className="max-w-md">
+              In 2019, I joined Cisco Meraki as a firmware engineer, working on large-scale networking systems. I was an early member of the team that launched a new Meraki switching product line and helped scale it to over 400,000 deployed switches worldwide.
             </p>
 
-            <p className="max-w-xl">
-              Over 5+ years, I contributed to firmware development across<br/>
-              switches, wireless access points, and security appliances,<br/>
-              delivering cross-platform architectures, improving system<br/>
-              resilience, and enabling new hardware generations used globally.
+            <p className="max-w-md">
+              Over 5+ years, I contributed to firmware development across switches, wireless access points, and security appliances, delivering cross-platform architectures, improving system resilience, and enabling new hardware generations used globally.
             </p>
 
-            <p className="max-w-xl">
-              In mid-2025, I joined Tamarind Bio as a Founding Software<br/>
-              Engineer. Tamarind builds an AI-powered platform for<br/>
-              intelligent protein design, and I work across the stack to build<br/>
-              the cloud backend, platform architecture, developer tooling, and<br/>
-              product interfaces used by scientists and biotech companies.
+            <p className="max-w-md">
+              In mid-2025, I joined Tamarind Bio as a Founding Software Engineer. Tamarind builds an AI-powered platform for intelligent protein design, and I work across the stack to build the cloud backend, platform architecture, developer tooling, and product interfaces used by scientists and biotech companies.
             </p>
 
-            <p className="max-w-xl">
-              I work closely with the founding team to scale our engineering<br/>
-              foundation, build durable systems, and accelerate scientific<br/>
-              discovery.
+            <p className="max-w-md">
+              I work closely with the founding team to scale our engineering foundation, build durable systems, and accelerate scientific discovery.
             </p>
           </div>
         </div>
