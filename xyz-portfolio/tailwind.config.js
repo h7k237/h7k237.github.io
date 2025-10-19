@@ -24,6 +24,15 @@ export default {
         'display': ["'Cormorant Garamond'", 'serif'],
         'body': ["'Crimson Text'", 'serif'],
       },
+      animation: {
+        'fade-in': 'fadeIn 0.8s ease-in',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(0)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
     },
   },
   plugins: [
@@ -50,6 +59,7 @@ export default {
           lineHeight: '1.3',
           letterSpacing: '-0.01em',
           color: theme('colors.paper-black'),
+          maxWidth: '36rem', // max-w-xl
         },
       })
     }

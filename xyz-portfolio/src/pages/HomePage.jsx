@@ -9,7 +9,6 @@ export default function HomePage() {
     <>
       <Navigation activeSection={activeSection} />
       <div className="min-h-screen bg-paper-white">
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700;900&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet" />
         <PersonalBrandV2
           activeSection={activeSection}
           setActiveSection={setActiveSection}
