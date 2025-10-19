@@ -20,8 +20,38 @@ export default {
         'forest-green': "#7A8F7C",
         'tree-bark': "#9C7A5B"
       },
+      fontFamily: {
+        'display': ["'Cormorant Garamond'", 'serif'],
+        'body': ["'Crimson Text'", 'serif'],
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addComponents, theme }) {
+      addComponents({
+        'h2': {
+          fontFamily: "'Cormorant Garamond', serif",
+          fontSize: '3.75rem', // text-6xl
+          fontWeight: '700',   // font-bold
+          lineHeight: '1.1',
+          letterSpacing: '-0.02em',
+          color: theme('colors.forest-green'), // uses your custom color
+        },
+        'h3': {
+          fontFamily: "'Cormorant Garamond', serif",
+          fontSize: '1.875rem', // text-3xl
+          fontWeight: '600',     // font-semibold
+          letterSpacing: '-0.01em',
+          color: theme('colors.paper-black'),
+        },
+        'p': {
+          fontFamily: "'Crimson Text', serif",
+          fontSize: '1.25rem',  // text-xl
+          lineHeight: '1.3',
+          letterSpacing: '-0.01em',
+          color: theme('colors.paper-black'),
+        },
+      })
+    }
+  ],
 }
-

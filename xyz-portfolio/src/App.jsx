@@ -1,7 +1,16 @@
-import PersonalBrandV2 from './components/PersonalBrandV2'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import PostPage from '@/pages/PostPage';
+import HomePage from '@/pages/HomePage';
 
 function App() {
-  return <PersonalBrandV2 />
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/posts/:slug" element={<PostPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App

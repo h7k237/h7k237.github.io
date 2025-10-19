@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { posts } from '@/data/posts';
+import { useLocation, Link } from 'react-router-dom';
 
-const PersonalBrandV2 = () => {
-  const [activeSection, setActiveSection] = useState('hero');
+const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
   const [visibleSections, setVisibleSections] = useState({});
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      setTimeout(() => {
+        document.getElementById(location.state.scrollTo)?.scrollIntoView();
+      }, 100);
+    }
+  }, [location]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,58 +47,8 @@ const PersonalBrandV2 = () => {
     document.getElementById(section)?.scrollIntoView({ behavior: 'auto' });
   };
 
-  const posts = [
-    {
-      title: "Building Scalable React Applications",
-      platform: "LinkedIn",
-      date: "Oct 2025",
-      link: "#"
-    },
-    {
-      title: "The Future of Frontend Development",
-      platform: "LinkedIn",
-      date: "Sep 2025",
-      link: "#"
-    },
-    {
-      title: "Performance Optimization Techniques",
-      platform: "LinkedIn",
-      date: "Sep 2025",
-      link: "#"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-paper-white">
-      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700;900&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet" />
-
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-paper-white/90 backdrop-blur-sm">
-        <div className="max-w-5xl mx-auto px-8 py-8 flex justify-between items-center">
-          <div
-            className="text-lg font-bold tracking-tight cursor-pointer text-forest-green hover:text-my-amber transition-colors"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
-            onClick={() => window.scrollTo({ top: 0 })}
-          >
-            HK
-          </div>
-          <div className="flex gap-12">
-            {['about', 'backstory', 'writing', 'contact'].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item)}
-                className={`text-sm capitalize transition-colors ${
-                  activeSection === item ? 'text-my-amber' : 'text-forest-green hover:text-my-amber'
-                }`}
-                style={{ fontFamily: "'Crimson Text', serif" }}
-              >
-                {item}
-              </button>
-            ))}
-          </div>
-        </div>
-      </nav>
-
+    <>
       {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center px-8 pt-32 pb-40" style={{
         minHeight: '100dvh',
@@ -98,9 +58,8 @@ const PersonalBrandV2 = () => {
       }}>
         <div className="max-w-2xl mx-auto text-center">
           <h1
-            className="text-8xl font-black mb-12 tracking-tight text-paper-black"
+            className="text-8xl font-display font-black mb-12 tracking-tight text-paper-black"
             style={{
-              fontFamily: "'Cormorant Garamond', serif",
               lineHeight: '0.95'
             }}
           >
@@ -148,66 +107,30 @@ const PersonalBrandV2 = () => {
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="max-w-2xl mx-auto">
             <div className="w-12 h-px bg-my-amber mb-20"></div>
-
-              <h2
-                className="text-6xl font-bold mb-12 text-forest-green"
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  lineHeight: '1.1',
-                  letterSpacing: '-0.02em'
-                }}
-              >
+              <h2 className="mb-12">
                 Hello!
               </h2>
 
             <div className="space-y-16">
-              <p
-                className="text-xl text-paper-black max-w-xl"
-                style={{
-                  fontFamily: "'Crimson Text', serif",
-                  lineHeight: '1.3',
-                  letterSpacing: '-0.01em'
-                }}
-              >
+              <p className="max-w-xl">
                 I'm a software engineer and tech enthusiast<br/>
                 based in San Francisco, CA.<br/>
               </p>
 
-              <p
-                className="text-xl text-paper-black max-w-xl"
-                style={{
-                  fontFamily: "'Crimson Text', serif",
-                  lineHeight: '1.3',
-                  letterSpacing: '-0.01em'
-                }}
-              >
+              <p className="max-w-xl">
                 I began my career in computer engineering,<br/>
                 driven by a deep curiosity to understand<br/>
                 systems from the ground up.
               </p>
 
-              <p
-                className="text-xl text-paper-black max-w-xl"
-                style={{
-                  fontFamily: "'Crimson Text', serif",
-                  lineHeight: '1.3',
-                  letterSpacing: '-0.01em'
-                }}
-              >
+              <p className="max-w-xl">
                 From learning how flip-flops store bits<br/>
                 to designing operating systems,<br/>
                 I've always been fascinated by the architecture<br/>
                 and inner workings of complex systems.
               </p>
 
-              <p
-                className="text-xl text-paper-black max-w-xl"
-                style={{
-                  fontFamily: "'Crimson Text', serif",
-                  lineHeight: '1.3',
-                  letterSpacing: '-0.01em'
-                }}
-              >
+              <p className="max-w-xl">
                 Today, I'm especially interested in evolving AI<br/>
                 technologies, and I'm excited to build novel,<br/>
                 impactful systems supercharged with the power of AI.
@@ -235,67 +158,32 @@ const PersonalBrandV2 = () => {
         <div className="max-w-2xl mx-auto">
           <div className="w-12 h-px bg-my-amber mb-20"></div>
 
-          <h2
-            className="text-6xl font-bold mb-12 text-forest-green"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              lineHeight: '1.1',
-              letterSpacing: '-0.02em'
-            }}
-          >
+          <h2 className="mb-12">
             Backstory
           </h2>
 
           <div className="space-y-16">
-            <p
-              className="text-xl text-paper-black max-w-xl"
-              style={{
-                fontFamily: "'Crimson Text', serif",
-                lineHeight: '1.3',
-                letterSpacing: '-0.01em'
-              }}
-            >
+            <p className="max-w-xl">
               I studied Computer Engineering at the University of Illinois at<br/>
               Urbana–Champaign, where I focused on computer architecture,<br/>
               embedded systems, and digital design.
             </p>
 
-            <p
-              className="text-xl text-paper-black max-w-xl"
-              style={{
-                fontFamily: "'Crimson Text', serif",
-                lineHeight: '1.3',
-                letterSpacing: '-0.01em'
-              }}
-            >
+            <p className="max-w-xl">
               In 2019, I joined Cisco Meraki as a firmware engineer, working<br/>
               on large-scale networking systems. I was an early member of<br/>
               the team that launched a new Meraki switching product line<br/>
               and helped scale it to over 400,000 deployed switches worldwide.
             </p>
 
-            <p
-              className="text-xl text-paper-black max-w-xl"
-              style={{
-                fontFamily: "'Crimson Text', serif",
-                lineHeight: '1.3',
-                letterSpacing: '-0.01em'
-              }}
-            >
+            <p className="max-w-xl">
               Over 5+ years, I contributed to firmware development across<br/>
               switches, wireless access points, and security appliances,<br/>
               delivering cross-platform architectures, improving system<br/>
               resilience, and enabling new hardware generations used globally.
             </p>
 
-            <p
-              className="text-xl text-paper-black max-w-xl"
-              style={{
-                fontFamily: "'Crimson Text', serif",
-                lineHeight: '1.3',
-                letterSpacing: '-0.01em'
-              }}
-            >
+            <p className="max-w-xl">
               In mid-2025, I joined Tamarind Bio as a Founding Software<br/>
               Engineer. Tamarind builds an AI-powered platform for<br/>
               intelligent protein design, and I work across the stack to build<br/>
@@ -303,14 +191,7 @@ const PersonalBrandV2 = () => {
               product interfaces used by scientists and biotech companies.
             </p>
 
-            <p
-              className="text-xl text-paper-black max-w-xl"
-              style={{
-                fontFamily: "'Crimson Text', serif",
-                lineHeight: '1.3',
-                letterSpacing: '-0.01em'
-              }}
-            >
+            <p className="max-w-xl">
               I work closely with the founding team to scale our engineering<br/>
               foundation, build durable systems, and accelerate scientific<br/>
               discovery.
@@ -329,39 +210,34 @@ const PersonalBrandV2 = () => {
         <div className="max-w-2xl mx-auto">
           <div className="w-12 h-px bg-my-amber mb-20"></div>
 
-          <h2
-            className="text-5xl font-bold mb-24 text-forest-green"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              letterSpacing: '-0.02em'
-            }}
-          >
+          <h2 className="mb-12">
             Writing
           </h2>
 
           <div className="space-y-16">
-            {posts.map((post, idx) => (
-              <a
-                key={idx}
-                href={post.link}
-                className="block group"
-              >
-                <h3
-                  className="text-3xl font-semibold mb-3 text-paper-black group-hover:text-my-amber transition-colors"
-                  style={{
-                    fontFamily: "'Cormorant Garamond', serif",
-                    letterSpacing: '-0.01em'
-                  }}
+            {posts.map((post, idx) => {
+              const isExternal = post.type === "external";
+              const Wrapper = isExternal ? 'a' : Link;
+              const linkProps = isExternal
+                ? { href: post.link, target: "_blank", rel: "noopener noreferrer" }
+                : { to: `/posts/${post.slug}` };
+              return (
+                <Wrapper
+                  key={idx}
+                  {...linkProps}
+                  className="block group"
                 >
-                  {post.title}
-                </h3>
-                <div className="flex gap-4 text-sm text-forest-green" style={{ fontFamily: "'Crimson Text', serif" }}>
-                  <span>{post.platform}</span>
-                  <span>·</span>
-                  <span>{post.date}</span>
-                </div>
-              </a>
-            ))}
+                  <h3 className="mb-3 group-hover:text-my-amber transition-colors">
+                    {post.title}
+                  </h3>
+                  <div className="flex gap-4 text-sm text-forest-green" style={{ fontFamily: "'Crimson Text', serif" }}>
+                    <span>{post.platform}</span>
+                    <span>·</span>
+                    <span>{post.date}</span>
+                  </div>
+                </Wrapper>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -376,24 +252,11 @@ const PersonalBrandV2 = () => {
         <div className="max-w-2xl mx-auto">
           <div className="w-12 h-px bg-my-amber mb-20"></div>
 
-          <h2
-            className="text-6xl font-bold mb-12 text-forest-green"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              lineHeight: '1.1',
-              letterSpacing: '-0.02em'
-            }}
-          >
+          <h2 className="mb-12">
             Let's connect
           </h2>
 
-          <p
-            className="text-xl mb-16 text-paper-black max-w-md"
-            style={{
-              fontFamily: "'Crimson Text', serif",
-              lineHeight: '1.7'
-            }}
-          >
+          <p className="mb-16 max-w-md">
             Always interested in new opportunities, collaborations, or just talking tech.
           </p>
 
@@ -416,14 +279,7 @@ const PersonalBrandV2 = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-16 px-8 text-center bg-forest-green">
-        <p className="text-sm text-paper-white" style={{ fontFamily: "'Crimson Text', serif" }}>
-          © 2025 Hammad Khan
-        </p>
-      </footer>
-    </div>
+    </>
   );
 };
 
