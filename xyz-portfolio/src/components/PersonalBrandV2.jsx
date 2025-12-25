@@ -97,6 +97,8 @@ const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
                 src={img}
                 alt=""
                 className="w-full h-full object-cover"
+                loading={idx === 0 ? "eager" : "lazy"}
+                fetchpriority={idx === 0 ? "high" : "auto"}
               />
             </div>
           ))}
