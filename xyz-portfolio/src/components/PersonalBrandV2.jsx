@@ -105,34 +105,34 @@ const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
         </div>
 
         <div className="relative z-10 max-w-2xl mx-auto text-center">
-        <div className="backdrop-blur-md bg-white/10 rounded-2xl p-12 shadow-2xl">
-          <h1
-            className="text-8xl font-display font-black mb-12 tracking-tight text-paper-black"
-            style={{
-              lineHeight: '0.95'
-            }}
-          >
-            Hammad<br/>Khan
-          </h1>
+          <div className="backdrop-blur-md bg-white/10 rounded-2xl p-6 md:p-12 shadow-2xl w-full max-w-lg mx-auto">
+            <h1
+              className="text-5xl sm:text-7xl md:text-8xl font-display font-black mb-12 tracking-tight text-paper-black"
+              style={{
+                lineHeight: '0.95'
+              }}
+            >
+              Hammad<br/>Khan
+            </h1>
 
-          <div className="flex gap-8 justify-center text-sm">
-            {[
-              { name: 'Email', link: 'mailto:h7k237@gmail.com' },
-              { name: 'LinkedIn', link: 'https://www.linkedin.com/in/hammadkhan97/' },
-              { name: 'GitHub', link: 'https://www.github.com/h7k237' }
-            ].map((item) => (
-              <a
-                key={item.name}
-                href={item.link}
-                target={item.link.startsWith('http') ? '_blank' : undefined}
-                className="text-forest-green hover:text-my-amber transition-colors"
-                style={{ fontFamily: "'Crimson Text', serif" }}
-              >
-                {item.name}
-              </a>
-            ))}
+            <div className="flex flex-wrap gap-x-4 gap-y-2 md:gap-8 justify-center text-xs sm:text-sm md:text-base">
+              {[
+                { name: 'Email', link: 'mailto:h7k237@gmail.com' },
+                { name: 'LinkedIn', link: 'https://www.linkedin.com/in/hammadkhan97/' },
+                { name: 'GitHub', link: 'https://www.github.com/h7k237' }
+              ].map((item) => (
+                <a
+                  key={item.name}
+                  href={item.link}
+                  target={item.link.startsWith('http') ? '_blank' : undefined}
+                  className="text-forest-green hover:text-my-amber transition-colors"
+                  style={{ fontFamily: "'Crimson Text', serif" }}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
         </div>
 
         {/* Slide Indicators */}
