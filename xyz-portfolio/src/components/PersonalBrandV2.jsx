@@ -7,22 +7,22 @@ const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const location = useLocation();
   const slideImages = [
-    '/slides/IMG_0427.jpg',
-    '/slides/IMG_0240.jpg',
-    '/slides/IMG_0456.jpg',
-    '/slides/IMG_0309.jpg', // <<
-    '/slides/IMG_0462.jpg', // <<
-    '/slides/IMG_0376.jpg',
-    '/slides/IMG_0401.jpg',
-    '/slides/IMG_0434.jpg',
-    '/slides/IMG_0438.jpg',
-    '/slides/IMG_0440.jpg',
-    '/slides/IMG_0445.jpg',
-    '/slides/IMG_0448.jpg',
-    '/slides/IMG_0452.jpg',
-//    '/slides/IMG_0457.jpg',
-    '/slides/IMG_0463.jpg',
-    '/slides/IMG_0470.jpg', // <<
+    '/slides/IMG_0427.webp',
+    '/slides/IMG_0240.webp',
+    '/slides/IMG_0456.webp',
+    '/slides/IMG_0309.webp', // <<
+    '/slides/IMG_0462.webp', // <<
+    '/slides/IMG_0376.webp',
+    '/slides/IMG_0401.webp',
+    '/slides/IMG_0434.webp',
+    '/slides/IMG_0438.webp',
+    '/slides/IMG_0440.webp',
+    '/slides/IMG_0445.webp',
+    '/slides/IMG_0448.webp',
+    '/slides/IMG_0452.webp',
+//    '/slides/IMG_0457.webp',
+    '/slides/IMG_0463.webp',
+    '/slides/IMG_0470.webp', // <<
   ];
 
   // Slideshow auto-advance
