@@ -4,7 +4,35 @@ import { useLocation, Link } from 'react-router-dom';
 
 const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
   const [visibleSections, setVisibleSections] = useState({});
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const location = useLocation();
+  const slideImages = [
+    '/slides/IMG_0427.jpg',
+    '/slides/IMG_0240.jpg',
+    '/slides/IMG_0456.jpg',
+    '/slides/IMG_0309.jpg', // <<
+    '/slides/IMG_0462.jpg', // <<
+    '/slides/IMG_0376.jpg',
+    '/slides/IMG_0401.jpg',
+    '/slides/IMG_0434.jpg',
+    '/slides/IMG_0438.jpg',
+    '/slides/IMG_0440.jpg',
+    '/slides/IMG_0445.jpg',
+    '/slides/IMG_0448.jpg',
+    '/slides/IMG_0452.jpg',
+//    '/slides/IMG_0457.jpg',
+    '/slides/IMG_0463.jpg',
+    '/slides/IMG_0470.jpg', // <<
+  ];
+
+  // Slideshow auto-advance
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % slideImages.length);
+    }, 7000);
+
+    return () => clearInterval(timer);
+  }, [slideImages.length]);
 
   useEffect(() => {
     if (location.state?.scrollTo) {
@@ -50,13 +78,34 @@ const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
   return (
     <>
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center px-8 pt-32 pb-40" style={{
+      <section id="hero" className="relative min-h-screen flex items-center justify-center px-8 pt-32 pb-40" style={{
         minHeight: '100dvh',
         opacity: visibleSections['hero'] ? 1 : 0,
         //transform: visibleSections['hero'] ? 'translateX(0)' : 'translateX(-40px)',
         transition: 'opacity 1s ease-out, transform 1s ease-out'
       }}>
-        <div className="max-w-2xl mx-auto text-center">
+        {/* Background Slideshow */}
+        <div className="absolute inset-0 z-0">
+          {slideImages.map((img, idx) => (
+            <div
+              key={idx}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                idx === currentImageIndex ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <img
+                src={img}
+                alt=""
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        <div className="relative z-10 max-w-2xl mx-auto text-center">
+        <div className="backdrop-blur-md bg-white/10 rounded-2xl p-12 shadow-2xl">
           <h1
             className="text-8xl font-display font-black mb-12 tracking-tight text-paper-black"
             style={{
@@ -66,17 +115,6 @@ const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
             Hammad<br/>Khan
           </h1>
 
-          {/*
-          <p
-            className="text-lg mb-20 text-forest-green max-w-md mx-auto"
-            style={{
-              fontFamily: "'Crimson Text', serif",
-              lineHeight: '1.9'
-            }}
-          >
-            Building with depth, speed and purpose—from firmware to cloud systems for AI-driven products
-          </p>
-          */}
           <div className="flex gap-8 justify-center text-sm">
             {[
               { name: 'Email', link: 'mailto:h7k237@gmail.com' },
@@ -94,6 +132,23 @@ const PersonalBrandV2 = ({ activeSection, setActiveSection }) => {
               </a>
             ))}
           </div>
+        </div>
+        </div>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+          {slideImages.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentImageIndex(idx)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                idx === currentImageIndex 
+                  ? 'bg-white w-8' 
+                  : 'bg-white/50 hover:bg-white/75'
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
         </div>
       </section>
 
